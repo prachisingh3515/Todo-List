@@ -17,4 +17,4 @@ Passes down task data and event handlers to the TodoItem components.
 ## TodoItem Component
 Displays task details and action buttons.
 Supports editing mode, allowing users to update task details.
-Handles task completion status, when we click on the tick icon it displays tick icon in a circle which means task is done .
+Handles task completion status, when display single tick means task is done.
