@@ -13,8 +13,8 @@ const TodoList = ({ tasks, updateTask, markAsDone }) => {
 
   return (
     <div>
-      {/* Search bar to filter tasks */}
-      <div className="search-bar">
+      
+      <div className="search-bar" data-aos="zoom-in" data-aos-delay="300">
         <input
           type="text"
           placeholder="Search Tasks"

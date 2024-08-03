@@ -77,3 +77,7 @@ li .completed .timestamp {
   text-decoration: line-through;
   color: #999;
 }
+.completed {
+  background-color: #d4edda; 
+  border-color: #c3e6cb;
+}

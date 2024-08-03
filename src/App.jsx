@@ -1,9 +1,23 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 import "./App.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 const App = () => {
+
+  //For Animation
+  useEffect(()=>{
+    AOS.init({
+      offset: 100,
+      duration: 800,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+    AOS.refresh();
+  },[])
+
   // State to store the list of tasks
   const [tasks, setTasks] = useState([]);
 
@@ -30,11 +44,11 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* Main heading of the application */}
+      
       <h1>Todo List</h1>
-      {/* Component to add a new task */}
+      
       <TodoForm addTask={addTask} />
-      {/* Component to display the list of tasks */}
+      
       <TodoList tasks={tasks} updateTask={updateTask} markAsDone={markAsDone} />
     </div>
   );
